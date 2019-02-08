@@ -14,7 +14,7 @@
 
 [6. Size is not grandeur, and territory does not make a nation](./size.c) - C program that prints the size of various types on the computer it is compiled and run on
 
-[7. What happens when you type gcc main.c]
+[7. What happens when you type gcc main.c](https://medium.com/@thomasgraeff/what-happens-when-you-type-gcc-main-c-5ce799d7fc74)
 
 [8. Intel](./100-intel) - Script that generates the assembly code (Intel syntax) of a C code and save in output file
 
