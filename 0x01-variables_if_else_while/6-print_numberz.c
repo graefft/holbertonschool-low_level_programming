@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main - print all single digit numbers 0-9 with putchar
+ * main - print all single digit numbers 0-9 with putchar
  *
- *Return: 0
+ * Return: 0
  */
 
 int main(void)
