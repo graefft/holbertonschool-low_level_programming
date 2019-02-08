@@ -10,7 +10,7 @@ int main(void)
 {
 	int x = 0;
 
-	while (x > 100)
+	while (x < 100)
 	{
 		putchar(x / 10 + '0');
 		putchar(x % 10 + '0');
