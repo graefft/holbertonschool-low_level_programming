@@ -13,7 +13,7 @@ int main(void)
 	while (x < 10)
 	{
 		putchar(x + '0');
-		if (x > 8)
+		if (x == 8)
 		{
 			putchar('\n');
 			break;
