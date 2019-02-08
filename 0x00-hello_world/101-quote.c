@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include <unistd.h>
 
 /**
@@ -10,10 +8,8 @@
 
 int main(void)
 {
-	char *str = "and that piece of art is useful\" - Dora Korpar, \
-2015-10-19\n";
 
-	write(2, str, strlen(str));
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 58);
 
 	return (1);
 }
