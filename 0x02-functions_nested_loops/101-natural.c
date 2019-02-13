@@ -18,7 +18,7 @@ int main(void)
 		z = (x % 5);
 		if (y == 0 || z == 0)
 		{
-			sum = sum + 1;
+			sum = sum + x;
 		}
 	}
 	printf("%d\n", sum);
