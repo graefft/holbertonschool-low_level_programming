@@ -26,3 +26,7 @@ File |Description
 [10. a + b](./10-add.c) | Function that adds two integers and returns the result
 
 [11. Holberton School, 98 Battery Street, the OG](./11-print_to_98.c) | Function that prints all natural numbers from n to 98 
+
+[12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself](./100-times_table.c) | Function that prints the _n_ times table, starting with 0
+
+[14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers...](./102-fibonacci.c) | Prigram that prints the first 50 Fibonacci numbers, starting with 1 and 2
