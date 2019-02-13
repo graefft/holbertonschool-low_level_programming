@@ -2,7 +2,7 @@
 
 /**
  * print_times_table - print the n times table starting with 0
- *
+ * @n: number of times to print
  *
  * Return: void
  *
@@ -11,7 +11,7 @@
 void print_times_table(int n)
 {
 	int x, y, a, b, c, res;
-	
+
 	res = 0;
 	if (n <= 15 && n >= 0)
 	{
