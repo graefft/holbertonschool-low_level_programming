@@ -29,4 +29,8 @@ File |Description
 
 [12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself](./100-times_table.c) | Function that prints the _n_ times table, starting with 0
 
-[14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers...](./102-fibonacci.c) | Prigram that prints the first 50 Fibonacci numbers, starting with 1 and 2
+[13. Nature made the natural number; All else is the work of women](./101-natural.c) | Compute and print sum of all multiples of 3 or 5 below 1024
+
+[14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers...](./102-fibonacci.c) | Program that prints the first 50 Fibonacci numbers, starting with 1 and 2
+
+[15. Even Liber Abbaci](./103-fibonacci.c) | Program that prints sum of even-valued terms below 4,000,000 in Fibonacci sequence
