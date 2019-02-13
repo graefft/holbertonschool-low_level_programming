@@ -9,17 +9,20 @@
 
 int main(void)
 {
-	int x, y, z, next;
+	long x, y, z, next;
 
+	x = 0;
 	y = 1;
-	z = 2;
 
-	for (x = 1; x <= 50; x++)
+	for (z = 1; z <= 50; z++)
 	{
-		printf("%d, ", y);
-		next = y + z;
-		y = z;
-		z = next;
+		next = x + y;
+		x = y;
+		y = next;
+		if (z <= 49)
+			printf("%ld, ", next);
+		else
+			printf("%ld\n", next);
 	}
 	return (0);
 }
