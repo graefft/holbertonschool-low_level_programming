@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "holberton.h"
 
 /**
  * main - compute and print sum of all multiples of 3 or 5
@@ -18,7 +17,9 @@ int main(void)
 		y = (x % 3);
 		z = (x % 5);
 		if (y == 0 || z == 0)
+		{
 			sum = sum + 1;
+		}
 	}
 	printf("%d\n", sum);
 	return (0);
