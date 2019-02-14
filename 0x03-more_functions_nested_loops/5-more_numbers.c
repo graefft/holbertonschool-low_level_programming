@@ -18,6 +18,7 @@ void more_numbers(void)
 		{
 			int y = (b / 10);
 			int z = (b % 10);
+
 			if (y != 0)
 			{
 				_putchar(y + '0');
