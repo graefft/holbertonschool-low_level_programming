@@ -28,7 +28,10 @@ int main(void)
 			}
 			else if ((x % 3 != 0) && (x % 5 == 0))
 			{
-				printf("Buzz ");
+				if (x < 100)
+					printf("Buzz ");
+				else
+					printf("Buzz");
 			}
 			else
 			{
