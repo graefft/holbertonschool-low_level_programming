@@ -18,26 +18,21 @@ int main(void)
 	{
 		if (x % 3 != 0 && x % 5 != 0)
 		{
-			printf("%d ", x);
+			printf("%d", x);
 		}
 		else
 		{
-			if ((x % 3 == 0) && (x % 5 != 0))
+			if (x % 3 == 0)
 			{
-				printf("Fizz ");
+				printf("Fizz");
 			}
-			else if ((x % 3 != 0) && (x % 5 == 0))
+			if (x % 5 == 0)
 			{
-				if (x < 100)
-					printf("Buzz ");
-				else
-					printf("Buzz");
-			}
-			else
-			{
-				printf("FizzBuzz ");
+				printf("Buzz");
 			}
 		}
+		if (x < 100) 
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
