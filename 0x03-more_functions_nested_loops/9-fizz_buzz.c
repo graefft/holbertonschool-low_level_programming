@@ -3,8 +3,8 @@
 
 /**
  * main - program that prints 1 to 100 but
- * "Fizz" on multiples of 3 and "Buzz on multiples of 5
- * and FizzBuzz on multiples of 3 and 5
+ * "Fizz" on multiples of 3 and "Buzz" on multiples of 5
+ * and "FizzBuzz" on multiples of 3 and 5
  *
  * Return: 0
  *
