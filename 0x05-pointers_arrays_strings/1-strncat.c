@@ -2,7 +2,8 @@
 
 /**
  * *_strncat - function that concatenates two strings
- * @src: string to append to dest
+ * @n: number of bytes to copy from src
+ * @src: source buffer
  * @dest: resulting string
  *
  * Return: pointer to dest
@@ -10,19 +11,19 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-        char *x = dest;
+	char *x = dest;
 
-        while (*dest != '\0')
-        {
-                dest++;
-        }
+	while (*dest != '\0')
+	{
+		dest++;
+	}
 
-        while (*src && n--)
-        {
-                *dest = *src;
-                dest++;
-                src++;
-        }
-        *dest = '\0';
-        return (x);
+	while (*src && n--)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (x);
 }
