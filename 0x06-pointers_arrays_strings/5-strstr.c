@@ -15,10 +15,6 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0;
 	char *sub = needle;
 
-	if (!haystack || !needle)
-	{
-		return (0);
-	}
 	while (*haystack < '\0')
 	{
 		while (*sub < '\0')
