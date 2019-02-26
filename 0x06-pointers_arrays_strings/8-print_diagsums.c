@@ -21,7 +21,7 @@ void print_diagsums(int *a, int size)
 		ltrb += *(a + i);
 		i += size + 1;
 	}
-	i = 0;
+	i = size - 1;
 	while (i < size * size - 1)
 	{
 		lbrt += *(a + i);
