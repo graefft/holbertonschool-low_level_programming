@@ -1,7 +1,5 @@
 # 0x07. - Recursion
------------
 FILE | DESCRIPTION
-
 [0. She locked away a secret, deep inside herself...](./0-puts_recursion.c) | Function that prints a string using recursion
 
 [1. Why is it so important to dream? Because, in my dreams we are together](./1-print_rev_recursion.c) | Function that prints a string in reverse
