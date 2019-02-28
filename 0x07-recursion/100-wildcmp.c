@@ -1,12 +1,21 @@
 #include "holberton.h"
 
+/**
+ * allstars - helper function for if s1 is asterik
+ *
+ * @s2: string 2
+ *
+ * Return: true or false
+ *
+ */
+
 int allstars(char *s2)
 {
 	if (*s2 == '*')
 	{
 		return (allstars(s2 + 1));
 	}
-	else if(*s2 == '\0')
+	else if (*s2 == '\0')
 	{
 		return (1);
 	}
@@ -35,7 +44,7 @@ int wildcmp(char *s1, char *s2)
 		{
 			return (1);
 		}
-		else 
+		else
 		{
 			return (0);
 		}
