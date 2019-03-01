@@ -1,6 +1,6 @@
 # Low-level programming & Algorithm - Hatching Out
 
-Solved tasks using the C programming languages
+Solved tasks using the C programming language
 
 # Description
 
