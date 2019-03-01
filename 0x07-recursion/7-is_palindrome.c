@@ -32,7 +32,7 @@ int _strlen_recursion(char *s)
 
 int start_end(char *b, char *e)
 {
-	if (b >= e)
+	if (b == e)
 	{
 		return (1);
 	}
