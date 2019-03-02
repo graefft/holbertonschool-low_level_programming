@@ -1,3 +1,4 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,7 +10,6 @@
  * @argv: coins
  *
  * Return: 0 or 1 if arguments passed is not exactly 1
- *
  */
 
 int main(int argc, char *argv[])
