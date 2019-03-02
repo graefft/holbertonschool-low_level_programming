@@ -56,12 +56,5 @@ int start_end(char *b, char *e)
 
 int is_palindrome(char *s)
 {
-	if (start_end(s, s + _strlen_recursion(s) - 1))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (start_end(s, s + _strlen_recursion(s) - 1));
 }
