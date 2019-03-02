@@ -2,40 +2,36 @@
 #include <stdlib.h>
 
 /**
- * main - prints minimum number of coins to make change
- * for an amount of money
+ * main - function to print out the change that needs to given
  * @argc: number of arguments
  * @argv: coins
- * Return: 0 or 1 if arguments passed is not exactly 1
+ * Return: always 0 for sucess
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int total, change;
+
 	if (argc != 2)
 	{
-		printf("Error\n");
-		return (1);
+		return (printf("Error\n"), 1);
 	}
 
-	int total = atoi(argv[1]);
-	int q = 0;
-	int d = 0;
-	int n = 0;
-	int pp = 0;
-	int p = 0;
-	int combos = 0;
+	change = atoi(argv[1]);
 
-	if (total >= 25)
-		q = (total / 25);
-	if (total >= 10)
-		d = (total - (q * 25)) / 10;
-	if (total >= 5)
-		n = (total - (q * 25) - (d * 10)) / 5;
-	if (total >= 2)
-		pp = (total - (q * 25) - (d * 10) - (n * 5)) / 2;
-	if (total >= 1)
-		p = (total - (q * 25) - (d * 10) - (n * 5) - (pp * 2));
-	combos = (q + d + n + pp + p);
-	printf("%d\n", combos);
+	for (total = 0; change > 0; total++)
+	{
+		if (change - 25 >= 0)
+			change = change - 25;
+		else if (change - 10 >= 0)
+			change = change - 10;
+		else if (change - 5 >= 0)
+			change = change - 5;
+		else if (change - 2 >= 0)
+			change = change - 2;
+		else if (change - 1 >= 0)
+			change = change - 1;
+	}
+	printf("%d\n", total);
 	return (0);
 }
