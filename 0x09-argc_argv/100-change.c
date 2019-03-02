@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	int total = atoi(argv[1]);
 	int q = 0;
 	int d = 0;
