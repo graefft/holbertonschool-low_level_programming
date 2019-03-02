@@ -6,9 +6,7 @@
  * main - adds positive numbers
  * @argc: number of arguments
  * @argv: numbers to add
- *
  * Return: 0 or 1 if symbols that are not digits
- *
  */
 
 int main(int argc, char *argv[])
