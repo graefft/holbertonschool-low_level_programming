@@ -4,13 +4,13 @@
 
 /**
  * main - multiply 2 numbers
- *
+ * @argc: number of arguments
+ * @argv: numbers to multiply
  * Return: 0
- *
  */
 
 int main(int argc, char *argv[])
-{	
+{
 	if (argc == 3)
 	{
 		int a = atoi(argv[1]);
