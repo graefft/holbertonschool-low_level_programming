@@ -36,6 +36,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	p2 = result;
 	while (*p1)
 	{
 		*p2 = *p1;
