@@ -28,22 +28,12 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	char *result = malloc(_strlen(str) + 1);
-	char *p1 = str;
-	char *p2 = result;
+	size_t len = _strlen(str);
+	char *result = malloc(len + 1);
 
-	if (str == NULL)
+	for (size_t i = 0; i <= len; i++)
 	{
-		return (NULL);
+		result[i] = str[i];
 	}
-	while (*p1)
-	{
-		*p2 = *p1;
-		p2++;
-		p1++;
-	}
-	*p2 = '\0';
-	if (result == NULL)
-		return (NULL);
 	return (result);
 }
