@@ -32,6 +32,10 @@ char *_strdup(char *str)
 	char *p1 = str;
 	char *p2 = result;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (*p1)
 	{
 		*p2 = *p1;
