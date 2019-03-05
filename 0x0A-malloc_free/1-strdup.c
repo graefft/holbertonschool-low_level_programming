@@ -36,7 +36,6 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	p2 = result;
 	while (*p1)
 	{
 		*p2 = *p1;
@@ -44,5 +43,7 @@ char *_strdup(char *str)
 		p1++;
 	}
 	*p2 = '\0';
+	if (result == NULL)
+		return (NULL);
 	return (result);
 }
