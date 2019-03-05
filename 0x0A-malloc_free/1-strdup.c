@@ -32,6 +32,10 @@ char *_strdup(char *str)
 	char *p1 = str;
 	char *p2 = result;
 
+	if (result == NULL)
+	{
+		return (NULL);
+	}
 	if (str == NULL)
 	{
 		return (NULL);
