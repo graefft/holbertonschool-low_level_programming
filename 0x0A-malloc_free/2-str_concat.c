@@ -14,7 +14,7 @@ int _strlen(char *s)
 {
 	int count = 0;
 
-	while (*s)
+	while (*s != '\0')
 	{
 		count++;
 		s++;
@@ -46,13 +46,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (s == 0)
 		return (NULL);
-	while (*s1)
+	while (*s1 != '\0')
 	{
 		s[i] = *s1;
 		s1++;
 		i++;
 	}
-	while (*s2)
+	while (*s2 != '\0')
 	{
 		s[i] = *s2;
 		s2++;
