@@ -39,6 +39,8 @@ char *str_concat(char *s1, char *s2)
 	p3 = p1 + p2 + 1;
 	s = malloc(p3);
 
+	if (s == 0)
+		return (NULL);
 	while (*s1)
 	{
 		s[i] = *s1;
