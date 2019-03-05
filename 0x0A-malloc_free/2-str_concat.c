@@ -34,6 +34,11 @@ char *str_concat(char *s1, char *s2)
 	size_t p1, p2, p3, i = 0;
 	char *s;
 
+	if (s1 == 0)
+		s1 = " ";
+	if (s2 == 0)
+		s2 = " ";
+
 	p1 = _strlen(s1);
 	p2 = _strlen(s2);
 	p3 = p1 + p2 + 1;
