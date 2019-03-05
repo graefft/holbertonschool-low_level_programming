@@ -30,10 +30,18 @@ char *_strdup(char *str)
 {
 	size_t len = _strlen(str);
 	char *result = malloc(len + 1);
-
+	
+	if (str == 0)
+	{
+		return (NULL);
+	}
 	for (size_t i = 0; i <= len; i++)
 	{
 		result[i] = str[i];
+	}
+	if (result == NULL)
+	{
+		return (NULL);
 	}
 	return (result);
 }
