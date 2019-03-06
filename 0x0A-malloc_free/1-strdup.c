@@ -28,15 +28,16 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
+	if (str == NULL)
+	{
+		return (NULL)
+	}
+
 	char *result = malloc(_strlen(str) + 1);
 	char *p1 = str;
 	char *p2 = result;
 
 	if (result == NULL)
-	{
-		return (NULL);
-	}
-	if (str == NULL)
 	{
 		return (NULL);
 	}
