@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * alloc_grid - returns pointer to a 2d array of integers
+ * free_grid - returns pointer to a 2d array of integers
  * @grid: pointer to grid
  * @height: height of grid
  * Return: void
