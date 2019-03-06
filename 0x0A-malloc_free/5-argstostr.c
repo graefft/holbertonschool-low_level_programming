@@ -10,8 +10,8 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *s, *k;
-	int i, j, x, y = 0;
+	char *pts, *pts_copy;
+	int i, j, len, x = 0;
 
 	if (ac <= 0 || av == NULL)
 	{
@@ -21,27 +21,27 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
-			x++;
+			len++;
 		}
-		x++;
+		len++;
 	}
-	x++;
-	s = malloc(x * sizeof(char));
-	if (s == NULL)
+	len++;
+	pts = malloc(len * sizeof(char));
+	if (pts == NULL)
 	{
 		return (NULL);
 	}
-	k = s;
+	pts_copy = pts;
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
-			s[y] = av[i][j];
-			y++;
+			pts[x] = av[i][j];
+			x++;
 		}
-		s[y] = '\n';
-		y++;
+		pts[x] = '\n';
+		x++;
 	}
-	s[y] = '\0';
-	return (k);
+	pts[x] = '\0';
+	return (pts_copy);
 }
