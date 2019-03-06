@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * argstostr - concatenates all the arguments of a program
@@ -10,7 +11,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *pts, *pts_copy;
+	char *pts;
 	int i, j, len, x = 0;
 
 	if (ac <= 0 || av == NULL)
@@ -31,7 +32,6 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	pts_copy = pts;
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
@@ -39,9 +39,8 @@ char *argstostr(int ac, char **av)
 			pts[x] = av[i][j];
 			x++;
 		}
-		pts[x] = '\n';
-		x++;
+		pts[x++] = '\n';
 	}
 	pts[x] = '\0';
-	return (pts_copy);
+	return (pts);
 }
