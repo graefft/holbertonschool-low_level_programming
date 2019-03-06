@@ -1,26 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-
-/**
- * _strlen - returns the length of a string
- *
- * @s: char to check
- *
- * Return: length
- */
-
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (*s != '\0')
-	{
-		count++;
-		s++;
-	}
-	return (count);
-}
 
 /**
  * str_concat - concatenates two strings
@@ -31,31 +10,26 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	size_t p1, p2, p3, i = 0;
+	unsigned int len1, len2, i = 0;
 	char *s;
 
-	p1 = _strlen(s1);
-	p2 = _strlen(s2);
-	p3 = p1 + p2 + 1;
-	s = malloc(p3);
-	if (s == NULL)
-		return (NULL);
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	while (*s1 != '\0')
+	if (s1 == 0)
+		len1 = 0;
+	if (s2 == 0)
+		len2 = 0;
+	for (len1 = 0; s1[len1]; len1++)
+			;
+	for (len2 = 0; s2[len2]; len2++)
+			;
+	s = malloc(sizeof(char) * (len1 + len2 + 1));
+	for (i = 0; i < len1; i++)
 	{
-		s[i] = *s1;
-		s1++;
-		i++;
+		s[i] = s1[i];
 	}
-	while (*s2 != '\0')
+	for (i = 0; i < len2; i++)
 	{
-		s[i] = *s2;
-		s2++;
-		i++;
+		s[i + len1] = s2[i];
 	}
-	s[i] = '\0';
+	s[len1 + len2] = '\0';
 	return (s);
 }
