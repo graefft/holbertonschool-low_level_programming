@@ -40,7 +40,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	while (*p1 != '\0')
+	while (*p1 != 0)
 	{
 		*p2 = *p1;
 		p2++;
