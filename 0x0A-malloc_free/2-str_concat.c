@@ -38,14 +38,12 @@ char *str_concat(char *s1, char *s2)
 	p2 = _strlen(s2);
 	p3 = p1 + p2 + 1;
 	s = malloc(p3);
-
+	if (s == NULL)
+		return (NULL);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	if (s == NULL)
-		return (NULL);
 	while (*s1 != '\0')
 	{
 		s[i] = *s1;
