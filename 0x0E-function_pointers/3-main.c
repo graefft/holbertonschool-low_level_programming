@@ -11,11 +11,11 @@
 
 int main(int argc, char *argv[])
 {
-        if (argc != 4)
-        {
-                printf("Error\n");
-                exit(98);
-        }
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
 	int a = atoi(argv[1]);
 	int b = atoi(argv[3]);
