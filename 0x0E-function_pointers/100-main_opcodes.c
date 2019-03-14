@@ -23,10 +23,12 @@ int main(int argc, char *argv[])
 		printf("Error\n"), exit(2);
 	}
 	p = (char *)main;
-	for (i = 0; i < (bytes); i++)
+	for (i = 0; i < bytes; i++)
 	{
-		printf("%.2hx ", p[i]);
+		if (i < (bytes - 1))
+			printf("%.2hx ", p[i]);
+		else
+			printf("%.2hx\n", p[i]);
 	}
-	printf("\n");
 	return (0);
 }
