@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i, bytes;
-	char *p;
+	unsigned char *p;
 
 	if (argc != 2)
 	{
@@ -22,13 +22,13 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n"), exit(2);
 	}
-	p = (char *)main;
+	p = (unsigned char *)main;
 	for (i = 0; i < bytes; i++)
 	{
 		if (i < (bytes - 1))
-			printf("%.2hx ", p[i]);
+			printf("%.2hhx ", p[i]);
 		else
-			printf("%.2hx\n", p[i]);
+			printf("%.2hhx\n", p[i]);
 	}
 	return (0);
 }
