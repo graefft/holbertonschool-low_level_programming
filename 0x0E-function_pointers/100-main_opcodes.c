@@ -4,7 +4,7 @@
 /**
  * main - prints opcodes of main function
  * @argc: number of arguments
- * @argv: arguments
+ * @argv: number of bytes
  * Return: 1 if arg not correct, 2 if bytes is negative, else 0
  */
 
