@@ -2,7 +2,6 @@
 
 FILE | DESCRIPTION
 ----|----
-
 [0. Django](./dog.h) | Defines 'struct dog' with some elements
 [1. A dog is the only thing on earth that loves you more than you love yourself](./1-init_dog.c) | Function that initializes a variable of type 'struct dog'
 [2. A dog will teach you unconditional love...](./2-print_dog.c) | Function that prints a 'struct dog'
