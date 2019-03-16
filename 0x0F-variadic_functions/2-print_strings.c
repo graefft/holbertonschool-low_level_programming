@@ -11,7 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ps;
 	unsigned int i;
-	const char * string;
+	const char *string;
 
 	va_start(ps, n);
 	for (i = 0; i < n; i++)
@@ -21,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		else
 			printf("%s", string);
-		if (separator != NULL && i != n -1)
+		if (separator != NULL && i != n - 1)
 			printf("%s", separator);
 	}
 	printf("\n");
