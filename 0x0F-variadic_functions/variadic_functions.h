@@ -10,7 +10,7 @@
  */
 typedef struct printall
 {
-	char *type;
+	char *t;
 	void (*f)(va_list);
 } print_t;
 

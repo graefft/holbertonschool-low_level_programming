@@ -19,7 +19,7 @@ void print_char(va_list pa)
 
 void print_int(va_list pa)
 {
-	printf("%d", va_arg(pa, int));
+	printf("%i", va_arg(pa, int));
 }
 
 /**
@@ -45,7 +45,7 @@ void print_string(va_list pa)
 
 	string = va_arg(pa, char *);
 
-	if (string == NULL)
+	if (!string)
 		string = "(nil)";
 	printf("%s", string);
 }
@@ -58,7 +58,7 @@ void print_string(va_list pa)
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, j;
+	unsigned int i, j;
 
 	print_t va[] = {
 		{"c", print_char},
@@ -66,22 +66,24 @@ void print_all(const char * const format, ...)
 		{"f", print_float},
 		{"s", print_string},
 		{NULL, NULL}
-		};
+	};
 
 	va_list pa;
 	char *sep = "";
 
 	va_start(pa, format);
+	i = 0;
 	while (format[i] && format)
 	{
 		j = 0;
-		while (va[j].type)
+		while (va[j].t)
 		{
-			if (*va[j].type == format[i])
+			if (*(va[j].t) == format[i])
 			{
 				printf("%s", sep);
 				va[j].f(pa);
 				sep = ", ";
+				break;
 			}
 			j++;
 		}
