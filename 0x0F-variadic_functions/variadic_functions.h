@@ -4,11 +4,11 @@
 #include <stdarg.h>
 
 /**
- * struct printall - print based on type
- * @type: type to print
- * @func: function to choose
+ * struct print - print based on type
+ * @t: type to print
+ * @f: function to choose
  */
-typedef struct printall
+typedef struct print
 {
 	char *t;
 	void (*f)(va_list);
