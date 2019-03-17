@@ -2,7 +2,7 @@
 
 /**
  * print_char - prints char
- * @c: char to print
+ * @pa: char to print
  * Return: void
  */
 
@@ -13,7 +13,7 @@ void print_char(va_list pa)
 
 /**
  * print_int - prints int
- * @i: int to print
+ * @pa: int to print
  * Return: void
  */
 
@@ -24,7 +24,7 @@ void print_int(va_list pa)
 
 /**
  * print_float - prints float
- * @f: float to print
+ * @pa: float to print
  * Return: void
  */
 
@@ -35,7 +35,7 @@ void print_float(va_list pa)
 
 /**
  * print_string - prints string
- * @s: string to print
+ * @pa: string to print
  * Return: void
  */
 
