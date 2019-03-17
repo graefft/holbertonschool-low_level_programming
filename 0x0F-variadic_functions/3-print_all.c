@@ -39,10 +39,7 @@ void print_string(va_list s)
 	string = va_arg(s, char *);
 
 	if (!string)
-	{
-		printf("(nil");
-		return;
-	}
+		string = "(nil)";
 	printf("%s", string);
 }
 
@@ -66,7 +63,7 @@ void print_all(const char * const format, ...)
 
 	va_start(pa, format);
 	i = 0;
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		j = 0;
 		while (funcs[j].t)
