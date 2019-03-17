@@ -19,7 +19,7 @@ void print_char(va_list c)
 
 void print_int(va_list i)
 {
-	printf("%i", va_arg(i, int));
+	printf("%d", va_arg(i, int));
 }
 
 /**
@@ -57,7 +57,6 @@ void print_string(va_list s)
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j;
-	char *sep = "";
 
 	print_type va[] = {
 		{"c", print_char},
@@ -68,6 +67,7 @@ void print_all(const char * const format, ...)
 		};
 
 	va_list pa;
+	char *sep = "";
 
 	va_start(pa, format);
 	while (format[i] && format)
