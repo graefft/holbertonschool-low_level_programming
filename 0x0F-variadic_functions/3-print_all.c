@@ -6,9 +6,9 @@
  * Return: void
  */
 
-void print_char(va_list c)
+void print_char(va_list pa)
 {
-	printf("%c", va_arg(c, int));
+	printf("%c", va_arg(pa, int));
 }
 
 /**
@@ -17,9 +17,9 @@ void print_char(va_list c)
  * Return: void
  */
 
-void print_int(va_list i)
+void print_int(va_list pa)
 {
-	printf("%d", va_arg(i, int));
+	printf("%d", va_arg(pa, int));
 }
 
 /**
@@ -28,9 +28,9 @@ void print_int(va_list i)
  * Return: void
  */
 
-void print_float(va_list f)
+void print_float(va_list pa)
 {
-	printf("%f", va_arg(f, double));
+	printf("%f", va_arg(pa, double));
 }
 
 /**
@@ -39,9 +39,11 @@ void print_float(va_list f)
  * Return: void
  */
 
-void print_string(va_list s)
+void print_string(va_list pa)
 {
-	char *string = va_arg(s, char *);
+	char *string;
+
+	string = va_arg(pa, char *);
 
 	if (string == NULL)
 		string = "(nil)";
@@ -58,7 +60,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j;
 
-	print_type va[] = {
+	print_t va[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -73,7 +75,7 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (va[j].type != NULL)
+		while (va[j].type)
 		{
 			if (*va[j].type == format[i])
 			{
