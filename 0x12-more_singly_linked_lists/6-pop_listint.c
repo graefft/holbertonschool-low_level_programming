@@ -8,17 +8,17 @@
 
 int pop_listint(listint_t **head)
 {
-	// create new head pointer //
+	/* create new head pointer */
 	listint_t *newhead = *head;
 	int x = newhead->n;
 
-	// if linked list is empty return 0 //
+	/* if linked list is empty return 0 */
 	if (*head == NULL)
 		return (0);
 
-	// set head to next node //
+	/* set head to next node */
 	*head = (*head)->next;
-	// free old head //
+	/* free head */
 	free(newhead);
 
 	return (x);
