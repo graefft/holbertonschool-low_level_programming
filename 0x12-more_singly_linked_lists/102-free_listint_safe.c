@@ -12,8 +12,6 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *next;
 	int size = 0;
 
-	if (!h)
-		return (0);
 	/* go through list */
 	while (*h)
 	{
