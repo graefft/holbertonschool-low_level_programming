@@ -14,21 +14,29 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new = malloc(sizeof(listint_t));
 	unsigned int i = 0;
 
+	/* check if malloc worked */
 	if (!new)
 		return (NULL);
 
+	/* put data into new node */
 	new->n = n;
 
+	/* iterate until idx */
 	while (temp && i < idx)
 	{
+		/* put temp ptr value into new node */
 		new->next = temp->next;
 		if (i == idx - 1)
 		{
+			/* new node ptr set to old temp ptr */
 			new->next = temp->next;
+			/* temp ptr points to new node */
 			temp->next = new;
+			/* return address of new node */
 			return (new);
 		}
 		else
+			/* move temp ahead in list */
 			temp = temp->next;
 	i++;
 	}
