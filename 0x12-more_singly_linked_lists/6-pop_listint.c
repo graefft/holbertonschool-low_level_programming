@@ -13,7 +13,7 @@ int pop_listint(listint_t **head)
 	int x = newhead->n;
 
 	/* if linked list is empty return 0 */
-	if (*head == NULL)
+	if (!head || !(*head))
 		return (0);
 
 	/* set head to next node */
