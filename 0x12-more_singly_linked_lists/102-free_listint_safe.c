@@ -12,17 +12,29 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *next;
 	int size = 0;
 
+	if (!h)
+		return (0);
 	/* go through list */
 	while (*h)
 	{
-		/* move pointer down list */
-		next = (*h)->next;
-		/* free pointer */
-		free(*h);
-		/* set pointer to next */
-		*h = next;
-		/* add to size */
-		size++;
+		if (*h - (*h)->next > 0)
+		{
+			/* move pointer down list */
+			next = (*h)->next;
+			/* free pointer */
+			free(*h);
+			/* set pointer to next */
+			*h = next;
+			size++;
+		}
+		else
+		{
+			/* free h ptr and set to NULL */
+			free(*h);
+			*h = NULL;
+			size++;
+			break;
+		}
 	}
 	/* set head to NULL */
 	*h = NULL;
