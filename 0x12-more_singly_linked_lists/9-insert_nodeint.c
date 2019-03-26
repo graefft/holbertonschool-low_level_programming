@@ -21,6 +21,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* put data into new node */
 	new->n = n;
 
+	/* check if idx is 0 */
+	if (idx == 0)
+	{
+		/* new node points to where head points */
+		new->next = *head;
+		/* set head pointer to new node */
+		*head = new;
+		return (new);
+	}
+
 	/* iterate until idx */
 	while (temp && i < idx)
 	{
