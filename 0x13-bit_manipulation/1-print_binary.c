@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	else
 	{
-		for (c = 31; c >= 0; c--)
+		for (c = 63; c >= 0; c--)
 		{
 			k = n >> c;
 
