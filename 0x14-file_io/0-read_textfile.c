@@ -12,11 +12,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd, fd_r, fd_wr;
 	char *buf = NULL;
 
-	/* check if filename is NULL */
 	if (!filename)
 		return (0);
 
-	/* malloc size to be printed */
 	buf = malloc(letters + 1);
 	if (!buf)
 		return (0);
@@ -37,10 +35,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	/* add null byte */
 	buf[letters] = '\0';
 
-	/* write */
 	fd_wr = write(STDOUT_FILENO, buf, fd_r);
 	if (fd_wr == -1)
 	{
