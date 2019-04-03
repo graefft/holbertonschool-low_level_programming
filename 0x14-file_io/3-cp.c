@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int file1, file2, n;
 	char buf[1024];
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	file2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	while ((n = read(file1, buf, 1024)) > 0)
 	{
