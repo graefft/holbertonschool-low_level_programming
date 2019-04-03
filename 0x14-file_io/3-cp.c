@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
 
 	cl = close(file1);
 	if (cl < 0)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cl), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1), exit(100);
 	cl = close(file2);
 	if (cl < 0)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cl), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file2), exit(100);
 	return (0);
 }
