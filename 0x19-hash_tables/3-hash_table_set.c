@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *head = NULL, *new = NULL;
 
 	/* check if no hash table or key */
-	if (!ht || !key || !(*key))
+	if (!ht || !key || !(*key) || !value)
 		return (0);
 
 	/* set head of table to current index */
@@ -21,6 +21,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while (head)
 	{
+		if (!strcmp(head->key, key) == 0)
+		{
+			free(head->value);
+			head->value = strdup(value);
+			if (!head->value)
+				return (0);
+			else
+				return (1);
+		}
 		head = head->next;
 	}
 
@@ -28,6 +37,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new = add_node(key, value);
 	if (!new)
 		return (0);
+
 	new->next = ht->array[i];
 	ht->array[i] = new;
 	return (1);
