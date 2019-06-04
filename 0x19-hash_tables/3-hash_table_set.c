@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *head = NULL, *new = NULL;
 
 	/* check if no hash table or key */
-	if (!ht || !key || !*ht || !*key)
+	if (!ht || !key || !(*key))
 		return (0);
 
 	/* set head of table to current index */
