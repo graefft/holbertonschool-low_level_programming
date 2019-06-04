@@ -9,14 +9,15 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int i = key_index((const unsigned char *)key, ht->size);
+	unsigned long int i;
 	hash_node_t *head = NULL, *new = NULL;
 
 	/* check if no hash table or key */
-	if (!ht || !key || !(*key) || !value)
+	if (!ht || !key || !value)
 		return (0);
 
 	/* set head of table to current index */
+	i = key_index((const unsigned char *)key, ht->size);
 	head = ht->array[i];
 
 	while (head)
