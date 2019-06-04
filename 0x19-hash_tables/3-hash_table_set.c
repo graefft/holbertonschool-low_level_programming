@@ -66,6 +66,10 @@ hash_node_t *add_node(const char *key, const char *value)
 	}
 
 	new->value = strdup(value);
-
+	if (new->value == NULL)
+	{
+		free(new)
+		return (0);
+	}
 	return (new);
 }
