@@ -49,6 +49,7 @@ void recursive_qs(int *array, size_t size, int lo, int hi)
  */
 size_t hoare(int *array, size_t size, int lo, int hi)
 {
+	int temp;
 	int pivot = array[hi];
 	int i = lo - 1;
 	int j = hi + 1;
@@ -63,10 +64,13 @@ size_t hoare(int *array, size_t size, int lo, int hi)
 			j--;
 		} while (array[j] > pivot);
 
-		if (i < j)
-			swap_and_print(array, size, &array[i], &array[j]);
-		else
-			break;
+		if (i >= j)
+			return (i);
+
+		temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+		print_array(array, size);
 	}
 	return (i);
 }
@@ -87,6 +91,6 @@ void swap_and_print(int *array, size_t size, int *x, int *y)
 	{
 		*x = *y;
 		*y = temp;
-		print_array(array, size);
+		print_array((const int *)array, size);
 	}
 }
