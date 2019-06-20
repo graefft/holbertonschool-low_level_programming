@@ -63,12 +63,12 @@ size_t hoare(int *array, size_t size, int lo, int hi)
 			j--;
 		} while (array[j] > pivot);
 
-		if (i >= j)
-			return (i);
-
-		swap_and_print(array, size, &array[i], &array[j]);
+		if (i < j)
+			swap_and_print(array, size, &array[i], &array[j]);
+		else
+			break;
 	}
-	return (0);
+	return (i);
 }
 
 /**
