@@ -1,64 +1,49 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - sorts a doubly-linked list of integers using
- * Insertion Sort algorithm
- * @list: pointer to head of linked list
+ * insertion_sort_list - sorts doubly-linked list of ints using Insertion Sort
+ * @list: list to sort
  * Return: void
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *x, *y, *z;
+	listint_t *node = NULL;
+	listint_t *temp = NULL;
 
-	x = *list;
-
-	if (!list || !*list || !(*list)->next)
+	if (!list || !(*list)->next)
 		return;
 
-	while (x && x->next)
+	node = (*list)->next;
+
+	while (node)
 	{
-		if (x->n > x->next->n)
+		temp = node;
+		while (temp->prev && node->n < temp->prev->n)
 		{
-			swap_list(x, x->next);
+			swap_list(*&list, temp->prev, temp);
 			print_list(*list);
-			y = x;
-			x = x->prev;
-			while (x && x->prev)
-			{
-				z = x;
-				if (z->n < z->prev->n)
-				{
-					swap_list(z->prev, z);
-					if (!z->prev)
-						*list = z;
-					print_list(*list);
-				}
-				else
-				{
-					break;
-				}
-			}
-			x = y;
 		}
-		else
-			x = x->next;
+		node = node->next;
 	}
 }
 
 /**
  * swap_list - swaps two elements in linked list
+ * @list: pointer to doubly-linked list
  * @x: first element
  * @y: second element
  * Return: void
  */
-void swap_list(listint_t *x, listint_t *y)
+void swap_list(listint_t **list, listint_t *x, listint_t *y)
 {
 	if (x->prev)
 		x->prev->next = y;
+	else
+		(*list) = y;
 	if (y->next)
 		y->next->prev = x;
 	x->next = y->next;
-	y->next = x;
 	y->prev = x->prev;
+	y->next = x;
 	x->prev = y;
 }
