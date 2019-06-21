@@ -20,8 +20,7 @@ void heap_sort(int *array, size_t size)
 	for (i = n - 1; i  >= 0; i--)
 	{
 		swap(&array[0], &array[i]);
-		if (array[0] != array[i])
-			print_array(array, size);
+		print_array(array, size);
 		heapify(array, i, 0, size);
 	}
 }
