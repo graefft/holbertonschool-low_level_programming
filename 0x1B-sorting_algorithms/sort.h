@@ -39,6 +39,8 @@ void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 int find_max(int *array, size_t size);
 void merge_sort(int *array, size_t size);
+void merge_sort_split(int *b, size_t begin, size_t end, int *a);
+void top_down_merge(int *a, size_t begin, size_t mid, size_t end, int *b);
 void heap_sort(int *array, size_t size);
 void heapify(int *array, size_t n, int i, size_t size);
 void radix_sort(int *array, size_t size);
