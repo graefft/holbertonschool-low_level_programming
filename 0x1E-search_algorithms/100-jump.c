@@ -10,13 +10,11 @@
 int jump_search(int *array, size_t size, int value)
 {
 	size_t i = 0;
-	/* Find block size to be jumped */
 	size_t jump = sqrt(size);
 
 	if (array == NULL)
 		return (-1);
 
-	/* Find block where element is present */
 	while (array[i] < value && i < size)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
@@ -28,7 +26,6 @@ int jump_search(int *array, size_t size, int value)
 	if (i >= size)
 		i = size - 1;
 
-	/* Linear search */
 	while (jump <= i)
 	{
 		printf("Value checked array[%lu] = [%d]\n", jump, array[jump]);
